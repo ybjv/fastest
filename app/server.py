@@ -66,7 +66,7 @@ async def analyze(request):
   #  else:
   #      prediction = ':)'
     
-    return JSONResponse({'result': str('h'+prediction+'h')})
+    return JSONResponse({'result': 'h'+str(prediction)+'h'})
 
 
 if __name__ == '__main__':
