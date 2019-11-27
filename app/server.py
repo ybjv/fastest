@@ -63,8 +63,17 @@ async def analyze(request):
     prediction = learn.predict(img)[0]
     predp = None
     if str(prediction) == 'crutches':
-        predp = 'Works!'
-
+        predp = 'crutches. Enjoy your seat!'
+    if str(prediction) == 'elderly':
+        predp = 'elderly. Enjoy your seat!'
+    if str(prediction) == 'stick':
+        predp = 'walking stick. Enjoy your seat!'
+    if str(prediction) == 'pregnant':
+        predp = 'pregnant women. Enjoy your seat!'
+    if str(prediction) == 'adults':
+        predp = 'Able-bodied adult. Please give up your seats to the others. Thank you!'
+    if str(prediction) == 'kids':
+        predp = 'Kids. Please give up your seats to the others. Thank you!'
     
     return JSONResponse({'result': predp })
 
