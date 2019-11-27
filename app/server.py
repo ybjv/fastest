@@ -61,10 +61,8 @@ async def analyze(request):
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
     prediction = learn.predict(img)[0]
-    if prediction == 'adults' or prediction == 'kids':
-        prediction = 'Please give up your seats to the needy. Thank you!'
-    else:
-        prediction = 'Yay!'
+    prediction = 'Please give up your seats to the needy. Thank you!'
+
     
     return JSONResponse({'result': prediction})
 
