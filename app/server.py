@@ -63,9 +63,9 @@ async def analyze(request):
     prediction = learn.predict(img)[0]
     
     if str(prediction) == 'elderly' or str(prediction) == 'crutches' or str(prediction) == 'stick' or str(prediction) == 'pregnant':
-        return JSONResponse({'result': 'Result = ' + prediction + '. Enjoy your seat!')})
+        return JSONResponse({'result': 'Result = ' + prediction + '. Enjoy your seat!'})
     else:
-        return JSONResponse({'result': 'Result = ' + prediction + '. Please give up your seat to the needy. Thank you!')})
+        return JSONResponse({'result': 'Result = ' + prediction + '. Please give up your seat to the needy. Thank you!'})
 
 
 if __name__ == '__main__':
