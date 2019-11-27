@@ -63,11 +63,11 @@ async def analyze(request):
     prediction = learn.predict(img)[0]
     predp = None
     if str(prediction) == 'crutches':
-        predp = 'crutches. Enjoy your seat!'
+        predp = 'crutches/walking stick. Enjoy your seat!'
     if str(prediction) == 'elderly':
         predp = 'elderly. Enjoy your seat!'
     if str(prediction) == 'stick':
-        predp = 'walking stick. Enjoy your seat!'
+        predp = 'crutches/walking stick. Enjoy your seat!'
     if str(prediction) == 'pregnant':
         predp = 'pregnant women. Enjoy your seat!'
     if str(prediction) == 'adults':
