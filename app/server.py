@@ -62,8 +62,10 @@ async def analyze(request):
     img = open_image(BytesIO(img_bytes))
     prediction = learn.predict(img)[0]
     
-
-    return JSONResponse({'result': prediction + type(prediction))})
+    if str(prediction) == 'elderly' or str(prediction) == 'crutches' or str(prediction) == 'stick' or str(prediction) == 'pregnant':
+        return JSONResponse({'result': 'Result = ' + prediction + '. Enjoy your seat!')})
+    else:
+        return JSONResponse({'result': 'Result = ' + prediction + '. Please give up your seat to the needy. Thank you!')})
 
 
 if __name__ == '__main__':
