@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/ci6zdlc8bq3nqw6/export%20%286%29.pkl?dl=1'
+export_file_url = 'https://www.dropbox.com/s/yyrfu0zop5lbq5z/export%20%287%29.pkl?dl=1'
 export_file_name = 'export.pkl'
 
 classes = ['adults', 'crutches', 'elderly', 'kids', 'pregnant', 'stick']
